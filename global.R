@@ -1,6 +1,10 @@
-libs <- c("tm", "tau", "stringr", "reshape2", "stringi", "microbenchmark", "RWeka", 
-          "wordcloud", "ggplot2", "shiny")
-lapply(libs, require, character.only = TRUE)
+library(tm)
+library(tau)
+library(stringr)
+library(reshape2)
+library(stringi)
+library(wordcloud)
+library(ggplot2)
 
 
 
@@ -14,14 +18,4 @@ load("newsUnigram.Rdata")
 load("newsBigram.Rdata")
 load("newsTrigram.Rdata")
 
-source("twitterBigramBackoff.r")
-source("twitterTrigramBackoff.r")
-source("twitterSentenceBuilder.r")
-
-source("tolstoyBigramBackoff.r")
-source("tolstoyTrigramBackoff.r")
-source("tolstoySentenceBuilder.r")
-
-source("newsBigramBackoff.r")
-source("newsTrigramBackoff.r")
-source("newsSentenceBuilder.r")
+source("userDefinedFunctions.r")
