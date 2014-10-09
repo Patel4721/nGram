@@ -5,9 +5,10 @@ Here is where my current Shiny app is deployed
 https://beperron.shinyapps.io/nGram/
 
 
-1.  On the nGram tab, I want to have the word clouds placed horizontally across the screen.  At the top, I want a separate panel that allows the user to adjust the number of words of the word cloud with a slider (input).  I haven’t figured out how to do either, although I have spent A LOT of time playing with different code — no luck getting it solved.
+1.  On the nGram tab, I want to have the word clouds placed horizontally across the screen.  At the top, I want a separate panel that allows the user to adjust the number of words of the word cloud with a slider (input).  Or, to have the word clouds presented like this application:  http://shiny.rstudio.com/gallery/word-cloud.html  
+I haven’t figured out how to do either, although I have spent A LOT of time playing with different code — no luck getting it solved.
 
-2.  On the sentence builder portion of the app, I would like to not show anything in the output until the user submits the words.  Right now, once the data are loaded, it automatically puts in some output.  
+2.  On the sentence builder portion of the app, I would like to not show anything in the output until the user submits the words.  Right now, once the data are loaded, it automatically puts in some output. How can I fix this? 
 
 3.  I am using three sets of user-defined functions for separate data files in the code — thus, I have one function for twitter data, another for news, and another for tolstoy.  I don’t know how to write a function that will allow me to apply them to each data set based on the user input.  In other words, these functions are doing the same thing to each data set, and I would like to optimize this code.  Any suggestions on how to do this?
 
