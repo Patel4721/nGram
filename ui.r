@@ -1,40 +1,24 @@
 library(shiny)
 
-shinyUI(navbarPage("Navbar!",
+shinyUI(navbarPage("",
     
-      tabPanel("Overview", dataTableOutput("table")),
+    tabPanel("Overview", includeMarkdown("nGram.Rmd")),
                    
-                   
-      tabPanel("Ngram Sentence Builder",
+    tabPanel("Word Prediction",
+        sidebarPanel(
+        textInput("gramWord", "Enter up to three words:"),
+                 submitButton("Predict")),
+               
+               mainPanel(
+                 h4("Next Word Prediction"),
+                 textOutput("newsWord"))),
+      
+      tabPanel("Sentence Builder",
             sidebarPanel(
-                  helpText("Just a moment"),
-                  textInput("grams", "Enter one or two words"),
-                  submitButton("Predict")),
+                  textInput("gramSentence", "Enter up to three words:"),
+                  submitButton("Build")),
                         
               mainPanel(
-                  h4("Twitter Prediction"),
-                      textOutput("twitterSentence"),
-                  h4("News Prediction"),
-                       textOutput("newsSentence"),
-                  h4("Tostoy Prediction"),
-                        textOutput("tolstoySentence"))),
- 
+                  h4("Sentence Builder"), textOutput("newsSentence")))
 
-       tabPanel("Word Clouds",
-              sidebarPanel(
-                  
-                helpText("A lot of data is being loaded ... Please be patient!"),
-                  
-                
-                sliderInput("numWords", 
-                            label = "Number of Words",
-                            min = 0, max = 100, value = 50)),
-                
-              mainPanel(
-                    plotOutput("twitterCloud"),
-                    plotOutput("newsCloud"),
-                    plotOutput("tolstoyCloud")
-                    ))
-      
-      
 ))

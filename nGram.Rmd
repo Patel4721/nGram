@@ -1,0 +1,42 @@
+---
+title: "nGram"
+author: "Brian Perron"
+date: "October 10, 2014"
+output: html_document
+---
+
+### Overview
+
+Thank you for visiting this site and testing out this Shiny App.  This app is intended to demonstrate text prediction based using a modeling approach from Natural Language Processing called n-grams.  An n-gram is a contiguous sequence of words or characters from a text corpus.  For this app, we will be focusing only on n-grams as words.  
+
+Consider the following sentence:
+
+__I like green eggs and ham__
+
+Each indvidual word represents a unigram.  A bi-gram is reflect pairs of sequential words.  Thus, the following are bi-grams and tri-grams derived from the sentence:  
+
++ I like (bi-gram)
++ I like green (tri-gram)
++ I like green eggs (4-gram)
++ like green (bi-gram)
++ like green eggs (tri-gram)
++ like green eggs and (4-gram)
+
+... and so on 
+
+
+The n-gram model can be further extended to longer sequences of words (e.g., 5-gram, 6-gram, 7-gram).  
+
+### Word Prediction
+
+This application uses and n-gram probability model for predicting the next word.  More specifically, the user enters up to three words.  If three words are entered, then the computer searches for the most probably 4-gram from its underlying database of n-grams.  If a match isn't discovered, it uses a "back off" method to find the most probable trigram or bigram.  If only two words are entered, then the search relies on tri-grams.  And, if only one word is entered, the search relies on bi-grams.  
+
+### Sentence Builder
+
+The other predictive model is the n-gram Sentence Builder.  It operates in the same fashion as the word prediction, allowing the user to enter up to three words and predicting the next word.  However, the algorithm takes the predicted word and then appends it to the user's input of words.  The algorithm then takes the last three words to predict the next word.  This continues until the algorithm predicts a period.  
+
+### N-gram database
+
+This application contains a very large database of uni-, bi-trim, and 4-grams that were derived from the news file of the HC Corpora (from www.corpora.heliohost.org).  Thus, every word predicted relies on n-grams from these text files.  Thus, it should not be surprising to find encounter some predictions that seem both plausible and completely non-sensical.  Please note that the Sentence Builder is performing very extensive searches and will be much slower than the Word Prediction.
+
+
