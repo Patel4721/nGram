@@ -1,1 +1,1 @@
-FIX!!!!
+Please go to my Shiny App:  https://github.com/beperron/nGram/blob/master/report.Rmd
