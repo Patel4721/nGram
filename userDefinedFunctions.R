@@ -66,7 +66,6 @@ newsSb <- function(x){
   sentence.no.first.letter <- paste0(strsplit(sentence, '')[[1]][-1], collapse='')
   formatted.sentence <- paste(cap.first.letter, sentence.no.first.letter, sep = '')
   formatted.sentence
-  
 }
 
 

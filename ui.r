@@ -7,8 +7,10 @@ shinyUI(navbarPage("",
     tabPanel("Word Prediction",
         sidebarPanel(
         textInput("gramWord", "Enter up to three words:"),
-                 submitButton("Predict")),
-               
+              submitButton("Predict")),
+        
+        
+        
                mainPanel(
                  h4("Next Word Prediction"),
                  textOutput("newsWord"))),
@@ -16,8 +18,7 @@ shinyUI(navbarPage("",
       tabPanel("Sentence Builder",
             sidebarPanel(
                   textInput("gramSentence", "Enter up to three words:"),
-                  submitButton("Build")),
-                        
+                  submitButton("Build")),       
               mainPanel(
                   h4("Sentence Builder"), textOutput("newsSentence")))
 

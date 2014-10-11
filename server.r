@@ -9,9 +9,13 @@ shinyServer(function(input, output) {
     })
   
   output$newsWord <- renderText({
+    
     predictionNews <- input$gramWord
     newsQuad.f(predictionNews)
-  })
+
+    
+    
+    })
   
   
   })
